@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Importiere die Seitenkomponenten
+import Home from './components/Home';
+import InfoMain from './components/InfoMain';
+import OpalInfo from './components/OpalInfo';
+import OpalQuiz from './components/OpalQuiz';
+import OpalTable from './components/OpalTable';
+import OpalPictures from './components/OpalPictures';
+import OpalVideos from './components/OpalVideos';
+import OpalLogin from './components/OpalLogin';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename='/quiz'>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/info-main" element={<InfoMain />} />
+          <Route path="/opal-info" element={<OpalInfo />} />
+          <Route path="/opal-quiz" element={<OpalQuiz />} />
+          <Route path="/opal-table" element={<OpalTable />} />
+          <Route path="/opal-pictures" element={<OpalPictures />} />
+          <Route path="/opal-videos" element={<OpalVideos />} />
+          <Route path="/opal-login" element={<OpalLogin />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
