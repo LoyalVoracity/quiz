@@ -7,11 +7,13 @@ function Home() {
   console.log('Home-Komponente wird gerendert')
   return (
     <div className='home-background'>
-      <div>
+      <div className='startcontainer'>
+        <div className='starttext'>
       <h1>Willkommen auf der Startseite!</h1>
-      <p>Dies ist die Home-Seite deiner App.</p>
+      <p>Diese Seite ist an Opal gerichtet</p>
+      </div>
       <Link to="/info-main">
-        <button>Nächste Seite</button>
+        <button>Navigations Seite</button>
       </Link>
       </div>
     </div>
