@@ -15,6 +15,7 @@ function InfoMain() {
       <Link to="/opal-pictures"><button>Opal Bilder</button></Link>
       <Link to="/opal-videos"><button>Opal Videos</button></Link>
       <Link to="/opal-login"><button>Opal Login</button></Link>
+      <Link to="/geraeteverwaltung"><button>Ger</button></Link>
       </div>
     </div>
   );

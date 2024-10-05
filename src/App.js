@@ -10,7 +10,8 @@ import OpalTable from './components/OpalTable';
 import OpalPictures from './components/OpalPictures';
 import OpalVideos from './components/OpalVideos';
 import OpalLogin from './components/OpalLogin';
-import geraeteverwaltung from './components/geraeteverwaltung';
+import Geräteverwaltung from './components/Geräteverwaltung';
+
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/opal-pictures" element={<OpalPictures />} />
           <Route path="/opal-videos" element={<OpalVideos />} />
           <Route path="/opal-login" element={<OpalLogin />} />
+          <Route path="/Geräteverwaltung" element={<Geräteverwaltung />} />
         </Routes>
       </div>
     </Router>
