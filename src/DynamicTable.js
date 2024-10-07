@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+const credentials = require('./config/credentials');
+
 
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SPREADSHEET_ID = '1SN4ltXJItwNMKmxBx9qjOEPMD0C1gTaQpki8rCt7a1c';
