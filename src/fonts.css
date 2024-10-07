@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'GeigerBuildHeadline';
+    src: url('./fonts/GeigerBuildHeadline-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GeigerBuildText';
+    src: url('./fonts/GeigerBuildText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GeigerBuildText';
+    src: url('./fonts/GeigerBuildText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  

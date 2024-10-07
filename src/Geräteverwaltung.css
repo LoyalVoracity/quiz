@@ -1,0 +1,262 @@
+/* Für den Fließtext */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'GeigerBuildText', sans-serif;
+}
+
+/* Für Überschriften */
+h1,
+h2,
+h3 {
+    font-family: 'GeigerBuildHeadline', sans-serif;
+}
+
+/* Für Paragraphen (Fließtext) */
+p,
+.pgeräte {
+    font-family: 'GeigerBuildText', sans-serif;
+}
+
+/* Eigene "Klassen" für die Schrift */
+p.fett {
+    font-weight: bold;
+}
+
+p.dicker {
+    font-weight: bolder;
+}
+
+.LayoutWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 99.7vw;
+    height: 99.6vh;
+    background-color: green;
+    border-radius: 20px;
+    padding: 1px;
+}
+
+.TopWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: #bed7aa;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.Top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    background-color: #bed7aa;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+.Top p {
+    margin-bottom: 10px;
+}
+
+.Top label {
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    z-index: 12;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-round {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.slider-round {
+    background-color: #7e766c;
+}
+
+input:checked+.slider-round:before {
+    transform: translateX(14px);
+}
+
+.MiddleWrapper {
+    display: flex;
+    height: 85%;
+    width: 100%;
+    background-color: lightgreen;
+    border-radius: 20px;
+}
+
+.MiddleHeaderTable {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 60%;
+    max-width: 60%;
+    background-color: #bed7aa;
+    justify-content: flex-start;
+    border-radius: 20px;
+    border: 2px solid black;
+
+}
+
+.MiddleHeader {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background-color: #bed7aa;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.MiddleHeader .SearchInput {
+    font-family: 'GeigerBuildText', sans-serif;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+    padding-left: 35px;
+    width: 150px;
+    height: 26px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg) no-repeat;
+    background-position: 10px center;
+    background-size: 10px;
+    flex-grow: 0;
+    transition: all 0.8s ease;
+    position: relative;
+}
+
+.ButtonNewDevice {
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.MiddleTable {
+    background-color: #bed7aa;
+    border-radius: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    height: 100%; /* Fixes jumping when filtering */
+    min-height: 700px;
+    max-height: 600px;
+    min-width: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.MiddleTable th:not(.id-column):not(.maxlast-column):not(.gewicht-column),
+.MiddleTable td:not(.id-column):not(.maxlast-column):not(.gewicht-column) {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #acc29b;
+  word-wrap: break-word;
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  width: 90px; /* Feste Breite für alle Zellen */
+  max-width: 90px; /* Maximale Breite ist fest */
+  min-width: 90px; /* Minimale Breite ist fest */
+  height: auto; /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
+  overflow: hidden; /* Bei Überlauf wird der Inhalt abgeschnitten */
+}
+.id-column,
+.maxlast-column,
+.gewicht-column {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #acc29b;
+    word-wrap: break-word;
+    border-radius: 2px;
+    text-overflow: ellipsis;
+    width: 50px; /* Feste Breite für alle Zellen */
+    max-width: 50px; /* Maximale Breite ist fest */
+    min-width: 50px; /* Minimale Breite ist fest */
+    height: auto; /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
+    overflow: hidden; /* Bei Überlauf wird der Inhalt abgeschnitten */
+}
+.MiddleTable thead {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.MiddleTable tbody {
+    font-weight: bolder;
+}
+.MiddleTable table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MiddleTable tbody tr:nth-child(even) {
+    background-color: #e9f7e1;
+}
+
+.MiddleRightWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.MiddleRightDetail,
+.MiddleRightProbleme,
+.MiddleRightDokumente,
+.MiddleRightStandorte,
+.MiddleRightSicherheitsinformationen {
+    flex-grow: 1;
+    background-color: lightpink;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+}
+

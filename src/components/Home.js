@@ -10,10 +10,10 @@ function Home() {
       <div className='startcontainer'>
         <div className='starttext'>
       <h1>Willkommen auf der Startseite!</h1>
-      <p>Diese Seite ist an Opal gerichtet</p>
+      <p>Es gibt verschiedene Bereiche.</p>
       </div>
       <Link to="/info-main">
-        <button>Navigations Seite</button>
+        <button className='buttonCustom'>Navigations Seite</button>
       </Link>
       </div>
     </div>

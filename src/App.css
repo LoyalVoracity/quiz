@@ -29,6 +29,29 @@ html, body {
   border-radius: 10px;
   background-color: black;
 }
+
+.buttonGeräte {
+  font-family: 'GeigerBuildText', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
+  position: relative;
+}
+.buttonGeräte:hover {
+  background-image: url('./pictures/Preview.png');
+  background-size: cover;
+  width: calc(192px *3);
+  height: calc(108px *3);
+  color: transparent;
+  margin-top: 200px;
+  cursor: url('./pictures/cursorDot.png'),auto;
+}
+
 .buttons-info {
   top: 80px;
   display: flex;
@@ -39,13 +62,24 @@ html, body {
   gap: 100px;
 
 }
-.buttonopal:hover {
+.buttonOpal:hover {
   background-image: url('./pictures/Opal.png');
   background-size: cover;
   height: 200px;
   background-color: #000000;
   color: transparent;
   cursor: none;
+}
+.buttonOpal {
+  font-family: 'GeigerBuildText', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
 }
 .opal-info {
   display: flex;
@@ -67,7 +101,8 @@ h1 {
   margin: auto;
 }
 
-button {
+.buttonCustom {
+  font-family: 'GeigerBuildText', sans-serif;
   font-size: 1rem;
   padding: 10px 20px;
   background-color: black;
@@ -78,7 +113,7 @@ button {
   font-weight: 700;
 }
 
-button:hover {
+.buttonCustom:hover {
   background-color: #000000;
 }
 

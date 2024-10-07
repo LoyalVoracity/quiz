@@ -6,16 +6,16 @@ function InfoMain() {
   return (
       <div className='home-background'>
       <div className='info-text'>
-      <h1>Info Main Seite</h1>
+      <h1>Das hier ist die Info Main Seite. Klick dich durch.</h1>
       </div>
       <div className='buttons-info'>
-      <Link to="/opal-info"><button className='buttonopal'>Opal Info Seite</button></Link>
-      <Link to="/opal-quiz"><button>Opal Quiz</button></Link>
-      <Link to="/opal-table"><button>Opal Tabelle</button></Link>
-      <Link to="/opal-pictures"><button>Opal Bilder</button></Link>
-      <Link to="/opal-videos"><button>Opal Videos</button></Link>
-      <Link to="/opal-login"><button>Opal Login</button></Link>
-      <Link to="/geraeteverwaltung"><button>Ger</button></Link>
+      <Link to="/opal-info"><button className='buttonOpal'>Opal Info Seite</button></Link>
+      <Link to="/opal-quiz"><button className='buttonCustom'>Opal Quiz</button></Link>
+      <Link to="/opal-table"><button className='buttonCustom'>Opal Tabelle</button></Link>
+      <Link to="/opal-pictures"><button className='buttonCustom'>Opal Bilder</button></Link>
+      <Link to="/opal-videos"><button className='buttonCustom'>Opal Videos</button></Link>
+      <Link to="/Honey"><button className='buttonCustom'>Honey</button></Link>
+      <Link to="/Miko"><button className='buttonCustom'>Miko</button></Link>
       </div>
     </div>
   );
