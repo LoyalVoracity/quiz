@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const API_KEY = 'AIzaSyACu0-vV2uvsh55hcCjNhJG-LOAgqL8ik4';
+const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const SPREADSHEET_ID = '1SN4ltXJItwNMKmxBx9qjOEPMD0C1gTaQpki8rCt7a1c';
 const RANGE = 'Gerateliste!A1:M20';
 
