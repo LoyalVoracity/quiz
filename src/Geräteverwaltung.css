@@ -35,7 +35,7 @@ p.dicker {
     flex-direction: column;
     width: 99.7vw;
     height: 99.6vh;
-    background-color: green;
+    background-color: #2e4f46;
     border-radius: 20px;
     padding: 1px;
 }
@@ -61,7 +61,7 @@ p.dicker {
     padding: 5px;
     border-radius: 10px;
     margin-right: 20px;
-    border: 2px solid black;
+    border: 2px solid #bed7aa;
 }
 
 .Top p {
@@ -71,6 +71,58 @@ p.dicker {
 .Top label {
     margin-top: 5px;
     align-self: flex-end;
+}
+.Top .geigerlogo,
+.Top .geigerlogo  {
+        width: 10%;
+        display: flex;
+        position: absolute;
+        margin-right: 1500px;
+}
+
+.fontlogo {
+    align-items: center; /* Horizontale Zentrierung */
+    justify-content: center; /* Beide Elemente in der Mitte zentrieren */
+    position: fixed;
+    margin-right: 2000px;
+    align-items: baseline;
+    
+}
+.fontlogo p {
+    margin: auto;
+    line-height: 1!important;
+    display: inline!important;
+   
+}
+.fontlogo #big {
+    font-family: 'GeigerBuildHeadline';
+    vertical-align: baseline;
+    align-items: center;
+    color: #f0001e;
+    margin-left: 20px;
+    font-size: 2rem;
+
+}
+
+.fontlogo #small {
+    font-family: 'GeigerBuildHeadline';
+    vertical-align: baseline;
+    align-items: center;
+    color: #f0001e;
+    margin-left: -58px;
+    font-size: 3rem;
+    font-weight: 100!important;
+   
+
+   
+}
+
+.Geiger {
+    width: 10%;
+    display: flex;
+    position: absolute;
+    margin-right: 2800px;
+    margin-top: 15px;
 }
 
 .switch {
@@ -184,7 +236,8 @@ input:checked+.slider-round:before {
     border-radius: 20px;
     width: 100%;
     border-collapse: collapse;
-    height: 100%; /* Fixes jumping when filtering */
+    height: 100%;
+    /* Fixes jumping when filtering */
     min-height: 700px;
     max-height: 600px;
     min-width: 100%;
@@ -194,20 +247,27 @@ input:checked+.slider-round:before {
     margin-left: auto;
     margin-right: auto;
 }
+
 .MiddleTable th:not(.id-column):not(.maxlast-column):not(.gewicht-column),
 .MiddleTable td:not(.id-column):not(.maxlast-column):not(.gewicht-column) {
-  padding: 5px;
-  text-align: center;
-  border: 1px solid #acc29b;
-  word-wrap: break-word;
-  border-radius: 2px;
-  text-overflow: ellipsis;
-  width: 90px; /* Feste Breite für alle Zellen */
-  max-width: 90px; /* Maximale Breite ist fest */
-  min-width: 90px; /* Minimale Breite ist fest */
-  height: auto; /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
-  overflow: hidden; /* Bei Überlauf wird der Inhalt abgeschnitten */
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #acc29b;
+    word-wrap: break-word;
+    border-radius: 2px;
+    text-overflow: ellipsis;
+    width: 90px;
+    /* Feste Breite für alle Zellen */
+    max-width: 90px;
+    /* Maximale Breite ist fest */
+    min-width: 90px;
+    /* Minimale Breite ist fest */
+    height: auto;
+    /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
+    overflow: hidden;
+    /* Bei Überlauf wird der Inhalt abgeschnitten */
 }
+
 .id-column,
 .maxlast-column,
 .gewicht-column {
@@ -217,19 +277,46 @@ input:checked+.slider-round:before {
     word-wrap: break-word;
     border-radius: 2px;
     text-overflow: ellipsis;
-    width: 50px; /* Feste Breite für alle Zellen */
-    max-width: 50px; /* Maximale Breite ist fest */
-    min-width: 50px; /* Minimale Breite ist fest */
-    height: auto; /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
-    overflow: hidden; /* Bei Überlauf wird der Inhalt abgeschnitten */
+    width: 50px;
+    /* Feste Breite für alle Zellen */
+    max-width: 50px;
+    /* Maximale Breite ist fest */
+    min-width: 50px;
+    /* Minimale Breite ist fest */
+    height: auto;
+    /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
+    overflow: hidden;
+    /* Bei Überlauf wird der Inhalt abgeschnitten */
 }
+
+.leistung-column {
+    padding: 5px !important;
+    text-align: center !important;
+    border: 1px solid #acc29b !important;
+    word-wrap: break-word !important;
+    border-radius: 2px !important;
+    text-overflow: ellipsis !important;
+    width: 50px !important;
+    /* Feste Breite für alle Zellen */
+    max-width: 50px !important;
+    /* Maximale Breite ist fest */
+    min-width: 50px !important;
+    /* Minimale Breite ist fest */
+    height: auto !important;
+    /* Höhe wird automatisch festgelegt, basierend auf dem Inhalt */
+    overflow: hidden !important;
+    /* Bei Überlauf wird der Inhalt abgeschnitten */
+}
+
 .MiddleTable thead {
     background-color: #f4f4f4;
     font-weight: bold;
 }
+
 .MiddleTable tbody {
     font-weight: bolder;
 }
+
 .MiddleTable table {
     margin-left: auto;
     margin-right: auto;
@@ -259,4 +346,3 @@ input:checked+.slider-round:before {
     border: 2px solid darkgray;
     border-radius: 20px;
 }
-

@@ -1,5 +1,6 @@
 /* Zentriere den Text und verwende einen einfachen Hintergrund */
-html, body {
+html,
+body {
   background-color: white;
   color: black;
   font-family: Arial, sans-serif;
@@ -10,6 +11,7 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
 .starttext {
   display: flex;
   justify-content: center;
@@ -19,15 +21,16 @@ html, body {
   top: 0px;
   margin-bottom: 40px;
 }
+
 .info-text {
   top: 20px;
-  display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: inherit;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 10px;
   background-color: black;
+  align-self: flex-start;
 }
 
 .buttonGeräte {
@@ -42,75 +45,140 @@ html, body {
   font-weight: 700;
   position: relative;
 }
+
 .buttonGeräte:hover {
-  background-image: url('./pictures/Preview.png');
+  background-image: url('./pictures/Preview.jpg');
   background-size: cover;
   width: calc(192px *3);
   height: calc(108px *3);
   color: transparent;
   margin-top: 200px;
-  cursor: url('./pictures/cursorDot.png'),auto;
+  cursor: url('./pictures/cursorDot.png'), auto;
 }
+
 
 .buttons-info {
-  top: 80px;
+  position: absolute;
+  width: 1400px;
+  height: 0;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: fixed;
-  align-items: flex-start;
-  gap: 100px;
+  justify-content: space-around;
+}
+
+.buttonOpal,
+.button2,
+.button3,
+.button4,
+.button5,
+.buttonHoney,
+.button7 {
+  font-family: 'GeigerBuildText', sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  justify-content: space-around;
 
 }
+
+.buttonOpal {
+  transform: rotate(-26.4deg) translateY(31px);
+}
+
+.button2 {
+  transform: rotate(-17deg) translateY(-51px);
+}
+
+.button3 {
+  transform: rotate(-8deg) translateY(-99px);
+}
+
+.button4 {
+  transform: rotate(4deg) translateY(-107px);
+}
+
+.button5 {
+  transform: rotate(12deg) translateY(-80px);
+}
+
+.buttonHoney {
+  transform: rotate(22deg) translateY(-20px);
+}
+
+.button7 {
+  transform: rotate(30deg) translateY(49.5px);
+}
+
 .buttonOpal:hover {
+  position: relative;
   background-image: url('./pictures/Opal.png');
   background-size: cover;
   height: 200px;
-  background-color: #000000;
+  top:-160px;
+  left: -50px;
   color: transparent;
   cursor: none;
 }
-.buttonOpal {
-  font-family: 'GeigerBuildText', sans-serif;
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: black;
-  border: none;
+.buttonHoney:hover {
+  cursor: -webkit-grabbing;
+}
+.hover-text {
+  position: inherit;
+  top: calc(50% - 15px); /* Nimmt die Hälfte der Schriftgröße von 20px */
+  left: auto;
+  align-items: inherit;
+  align-self: center;
+  transform: translate();
+  background-color: rgb(255, 255, 255);
   color: white;
-  cursor: pointer;
-  border-radius: 20px;
-  font-weight: 700;
+  border-radius: 6px;
+  visibility: visible;
+  opacity: 1;
+  white-space: nowrap;
+  color: rebeccapurple;
+  font-size: 30px;
 }
-.opal-info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  top: 80px;
-}
-.table1 {
-  width: auto;
-  height: 100px;
-  border: 3px solid black;
-  background-color: salmon;
+.love {
+  position: inherit;
+  top: calc(50% - 15px); /* Nimmt die Hälfte der Schriftgröße von 20px */
+  left: auto;
+  right: auto;
+  align-items: inherit;
+  align-self: center;
+  transform: translate();
+  background-color: none;
+  opacity: 1;
+  white-space: nowrap;
+  color: rebeccapurple;
+  font-size: 30px;
+  background-image: url(./pictures/eye1.png);
+  background-size: cover;
+  
+
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  margin: auto;
-}
-
-.buttonCustom {
-  font-family: 'GeigerBuildText', sans-serif;
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: black;
-  border: none;
+.hover-text-honey {
+  position: inherit;
+  top: calc(50% - 6px); /* Nimmt die Hälfte der Schriftgröße von 12px */
+  left: auto;
+  align-items: inherit;
+  align-self: center;
+  transform: translate();
+  background-color: rgb(255, 255, 255);
   color: white;
-  cursor: pointer;
-  border-radius: 20px;
-  font-weight: 700;
+  border-radius: 6px;
+  visibility: visible;
+  opacity: 1;
+  white-space: nowrap;
+  color: darkred;
+  font-size: 12px;
 }
 
 .buttonCustom:hover {
@@ -124,13 +192,29 @@ p {
 
 .home-background {
   background-image: url('./pictures/earth4k.jpg');
-  background-size: cover; /* Deckt den gesamten Bereich ab */
-  background-position: center; /* Zentriert das Bild */
-  background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-  height: 100vh; /* Höhe des Bildes, um den ganzen Bildschirm abzudecken */
-  color: white; /* Textfarbe */
+  background-size: cover;
+  /* Deckt den gesamten Bereich ab */
+  background-position: center;
+  /* Zentriert das Bild */
+  background-repeat: no-repeat;
+  /* Verhindert das Wiederholen des Bildes */
+  height: 100vh;
+  /* Höhe des Bildes, um den ganzen Bildschirm abzudecken */
+  color: white;
+  /* Textfarbe */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.buttonCustom {
+  font-family: 'GeigerBuildText', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
 }

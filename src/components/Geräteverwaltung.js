@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Geräteverwaltung.css';
 import '../fonts.css';
 import DynamicTable from '../DynamicTable';  // Verweise auf DynamicTable
 import Modal from '../Modal';  // Verweise auf das Modal
-import { appendDevice } from '../googleSheets';  // Importiere die Google Sheets Funktion
+import Geiger from '../pictures/geigerpng.png';
+import GeigerBlack from '../pictures/geigerblack.png';  // Importiere das andere Bild
+import { appendDevice } from '../googleSheets';  // Stelle sicher, dass der Pfad und der Export korrekt sind
 
 function Geräteverwaltung() {
   const [searchTerm, setSearchTerm] = useState(''); // Zustand für die externe Suche
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal-Zustand
+  const [isGeigerVisible, setIsGeigerVisible] = useState(true); 
+  const [isHiButtonVisible, setIsHiButtonVisible] = useState(true);  // Zustand für "Hi"-Button
   const [newDevice, setNewDevice] = useState({
     typ: '',
     hersteller: '',
@@ -19,10 +23,23 @@ function Geräteverwaltung() {
     gewicht: ''
   });
 
+  const [logo, setLogo] = useState(Geiger);  // Zustand für das Logo
+
+  // Suche nach "geigerblack" tauscht das Logo aus
+  useEffect(() => {
+    if (searchTerm.toLowerCase() === 'geigerblack') {
+      setLogo(GeigerBlack);  // Logo zu geigerblack ändern
+    } else {
+      setLogo(Geiger);  // Standardlogo setzen
+    }
+  }, [searchTerm]);
+
+  // Funktion zur Änderung des Suchbegriffs
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);  // Suchbegriff aktualisieren
   };
 
+  // Öffne und schließe das Modal
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
@@ -31,6 +48,7 @@ function Geräteverwaltung() {
     setIsModalOpen(false);
   };
 
+  // Eingabe-Handler für neue Geräte
   const handleInputChange = (event) => {
     setNewDevice({
       ...newDevice,
@@ -38,10 +56,10 @@ function Geräteverwaltung() {
     });
   };
 
+  // Submittet ein neues Gerät zu Google Sheets
   const handleSubmit = async () => {
     try {
-      // Gerät zur Google Sheets Tabelle hinzufügen
-      await appendDevice(Object.values(newDevice));
+      await appendDevice(Object.values(newDevice));  // Gerät zur Google Sheets Tabelle hinzufügen
       alert('Gerät erfolgreich hinzugefügt!');
       handleModalClose();
     } catch (error) {
@@ -50,13 +68,24 @@ function Geräteverwaltung() {
     }
   };
 
+  // Funktion zum Umschalten der Sichtbarkeit des Geiger-Logos
+  const toggleGeigerVisibility = () => {
+    setIsGeigerVisible(!isGeigerVisible);
+  };
+
+  // Funktion zum Umschalten der Sichtbarkeit des "Hi"-Buttons
+  const toggleHiButtonVisibility = () => {
+    setIsHiButtonVisible(!isHiButtonVisible);
+  };
+
   return (
     <div className='LayoutWrapper'>
       <div className='TopWrapper'>
         <div className='Top'>
           <p>Mikail Aydemir</p>
+          <img src={logo} className='geigerlogo' id='geigerlogo' alt="Geiger Logo" onClick={toggleGeigerVisibility} style={{ visibility: isGeigerVisible ? 'visible' : 'hidden' }} />
           <label className='switch'>
-            <input type='checkbox' id="toggleButton" />
+            <input type='checkbox' id="toggleButton" onChange={toggleGeigerVisibility} />
             <span className='slider-round'></span>
           </label>
         </div>
@@ -79,10 +108,14 @@ function Geräteverwaltung() {
         </div>
         <div className='MiddleRightWrapper'>
           <div className='MiddleRightDetail'>
-            <p>Detail</p>
+            <p>Detailansicht</p>
+            {/* Der "Hi"-Button wird nur angezeigt, wenn `isHiButtonVisible` true ist */}
+            {isHiButtonVisible && <button onClick={toggleGeigerVisibility}>Hi</button>}
           </div>
           <div className='MiddleRightProbleme'>
             <p>Probleme</p>
+            {/* Dieser Button schaltet den "Hi"-Button sichtbar/unsichtbar */}
+            <button onClick={toggleHiButtonVisibility}>magic!</button>
           </div>
           <div className='MiddleRightDokumente'>
             <p>Dokumente</p>
