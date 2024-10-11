@@ -85,6 +85,8 @@ body {
   font-weight: 700;
   padding: 10px 20px;
   justify-content: space-around;
+  position: relative;
+  z-index: 2;
 
 }
 
@@ -129,62 +131,54 @@ body {
 .buttonHoney:hover {
   cursor: -webkit-grabbing;
 }
-.hover-text {
-  position: inherit;
-  top: calc(50% - 15px); /* Nimmt die Hälfte der Schriftgröße von 20px */
-  left: auto;
-  align-items: inherit;
-  align-self: center;
-  transform: translate();
-  background-color: rgb(255, 255, 255);
-  color: white;
-  border-radius: 6px;
-  visibility: visible;
-  opacity: 1;
-  white-space: nowrap;
-  color: rebeccapurple;
-  font-size: 30px;
+.hover-text, .hover-text-honey {
+  position: absolute;
+  top: 50%; /* Gleiche vertikale Position */
+  left: 50%; /* Gleiche horizontale Position */
+  transform: translate(-50%, -50%); /* Exakte Zentrierung */
+  white-space: nowrap; /* Verhindert Textumbruch */
+  z-index: 2; /* Sicherstellen, dass beide Texte im Vordergrund sind */
 }
-.love {
-  position: inherit;
-  top: calc(50% - 15px); /* Nimmt die Hälfte der Schriftgröße von 20px */
-  left: auto;
-  right: auto;
-  align-items: inherit;
-  align-self: center;
-  transform: translate();
-  background-color: none;
-  opacity: 1;
-  white-space: nowrap;
-  color: rebeccapurple;
-  font-size: 30px;
-  background-image: url(./pictures/eye1.png);
-  background-size: cover;
-  
 
+.hover-text {
+  font-size: 30px;
+  color: rebeccapurple;
 }
 
 .hover-text-honey {
-  position: inherit;
-  top: calc(50% - 6px); /* Nimmt die Hälfte der Schriftgröße von 12px */
-  left: auto;
-  align-items: inherit;
-  align-self: center;
-  transform: translate();
-  background-color: rgb(255, 255, 255);
-  color: white;
-  border-radius: 6px;
-  visibility: visible;
-  opacity: 1;
-  white-space: nowrap;
+  font-size: 40px; /* Selbe Schriftgröße */
   color: darkred;
-  font-size: 12px;
+  z-index: 1; /* Leicht hinter dem großen Text */
 }
+
 
 .buttonCustom:hover {
   background-color: #000000;
 }
+.text-container {
+  position: absolute;
+  top: 50%; /* Behalte den Text zentriert */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Halte den Text vor dem Auge */
+}
 
+.eye-animation-container {
+  position: absolute;
+  left: 50%; /* Positioniere es mittig */
+  top: -350px;
+  transform: translate(-50%, -0%);
+  z-index: 1;
+  width: 200px; /* Stelle sicher, dass der Container eine feste Breite hat */
+  height: auto;
+  }
+  
+
+
+.eye-animation {
+  width: 200px; /* Größe des Auges */
+  height: auto;
+}
 p {
   font-size: 1.2rem;
   margin-bottom: 20px;
