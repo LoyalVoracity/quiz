@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css'; // Gehe eine Ebene hoch, dann importiere App.css
-
+import '../App.css'
 
 function Home() {
   console.log('Home-Komponente wird gerendert')

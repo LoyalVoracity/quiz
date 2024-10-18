@@ -26,7 +26,7 @@ body {
   top: 20px;
   justify-content: center;
   align-items: center;
-  position: inherit;
+  position: absolute;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 10px;
   background-color: black;
@@ -55,7 +55,6 @@ body {
   margin-top: 200px;
   cursor: url('./pictures/cursorDot.png'), auto;
 }
-
 
 .buttons-info {
   position: absolute;
