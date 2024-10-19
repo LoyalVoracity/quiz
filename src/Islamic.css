@@ -10,74 +10,85 @@ body {
 .islamic-background {
     background-image: url('./pictures/islamic.jpg');
     background-position: center;
-    background-size: cover; /* Ensure it covers the entire area */
+    background-size: cover;
+    /* Ensure it covers the entire area */
     background-repeat: no-repeat;
     height: 100vh;
     color: white;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 .start-head {
-    color: #599aa7;
+    color: #000000;
     position: absolute;
-    top: 0px;
-    font-size: 2rem;
-    z-index: 1; /* Ensures the heading is above other elements */
-    background-color: ;
+    top: 30px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    z-index: 2;
+    /* Ensures the heading is above other elements */
+
 }
 
 .container-times {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 150px; /* Push buttons down a bit */
+    gap: 30px;
+    margin-top: 150px;
+    /* Push buttons down a bit */
     z-index: 1;
+
 }
 
-button {
+.container-times button {
     font-family: 'GeigerBuildText', sans-serif !important;
     padding: 5px 0px;
     font-size: 1.4rem;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #b7d9db;
-    border-color: #b7d9db;
-
-    opacity: 85%;
+    background-color: transparent;
+    opacity: 65%;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #7da8a8; /* Darken on hover */
+.container-times button:hover {
+    background-color: #00f2ff27;
+    /* Darken on hover */
 }
-button::after {
+
+.container-timesbutton::after {
     transition: none;
 }
 
-.Fajr button, 
-.Dhuhr button, 
-.Asr button, 
-.Maghrib button, 
+.Fajr button,
+.Dhuhr button,
+.Asr button,
+.Maghrib button,
 .Isha button {
     width: 130px;
     border-radius: 20px;
     position: relative;
     margin-bottom: 600px;
+    font-family: 'GeigerBuildText', sans-serif !important;
 }
 
 .container-click {
     display: flex;
-    justify-content: center; /* Align content at the top */
-    align-items: center;     /* Align content at the start */
-    flex-direction: column;      /* Ensure the text stays as a block at the top */
-    position: fixed;
-    bottom: 320px;
-    background-color: rgba(14, 41, 63, 0.9); /* Semi-transparent */
+    justify-content: center;
+    /* Align content at the top */
+    align-items: center;
+    /* Align content at the start */
+    flex-direction: column;
+    /* Ensure the text stays as a block at the top */
+    position: absolute;
+    bottom: 200px;
+    background-color: transparent;
     width: 500px;
-    height:180px;
+    height: 180px;
     border-radius: 20px;
     z-index: 1;
     padding: 20px;
@@ -86,4 +97,64 @@ button::after {
     font-size: 1.2rem;
     text-align: center;
     font-weight: bolder;
+    font-family: 'GeigerBuildText', sans-serif !important;
+}
+
+.floating-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #27566b0e;
+    border-radius: 20px;
+    z-index: 1;
+    width: 80%;
+    height: 90%;
+}
+
+.start-head a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.start-head a:visited {
+    color: inherit;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-effect {
+    font-family: 'GeigerBuildText', sans-serif !important;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.container-click p {
+    font-family: 'Arial', sans-serif;
+    /* oder eine andere serifenlose Schriftart */
+    font-size: 18px;
+    white-space: normal;
+    /* Damit der Text richtig umbrochen wird */
+    word-break: break-word;
+    /* Verhindert, dass lange Wörter abgeschnitten werden */
+    font-family: 'GeigerBuildText', sans-serif !important;
 }

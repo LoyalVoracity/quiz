@@ -1,0 +1,94 @@
+.buttons-info {
+    position: absolute;
+    width: 1400px;
+    height: 0;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttonOpal,
+  .button2,
+  .button3,
+  .button4,
+  .button5,
+  .buttonHoney,
+  .button7 {
+    font-family: 'GeigerBuildText', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+  
+  }
+  
+  .buttonOpal {
+    transform: rotate(-26.4deg) translateY(31px);
+  }
+  
+  .button2 {
+    transform: rotate(-17deg) translateY(-51px);
+  }
+  
+  .button3 {
+    transform: rotate(-8deg) translateY(-99px);
+  }
+  
+  .button4 {
+    transform: rotate(4deg) translateY(-107px);
+  }
+  
+  .button5 {
+    transform: rotate(12deg) translateY(-80px);
+  }
+  
+  .buttonHoney {
+    transform: rotate(22deg) translateY(-20px);
+  }
+  
+  .button7 {
+    transform: rotate(30deg) translateY(49.5px);
+  }
+  
+  .buttonOpal:hover {
+    position: relative;
+    background-image: url('./pictures/Opal.png');
+    background-size: cover;
+    height: 200px;
+    top:-160px;
+    left: -50px;
+    color: transparent;
+    cursor: none;
+  }
+  .buttonHoney:hover {
+    cursor: -webkit-grabbing;
+  }
+  .hover-text, .hover-text-honey {
+    position: absolute;
+    top: 50%; /* Gleiche vertikale Position */
+    left: 50%; /* Gleiche horizontale Position */
+    transform: translate(-50%, -50%); /* Exakte Zentrierung */
+    white-space: nowrap; /* Verhindert Textumbruch */
+    z-index: 2; /* Sicherstellen, dass beide Texte im Vordergrund sind */
+  }
+  
+  .hover-text {
+    font-size: 30px;
+    color: rebeccapurple;
+  }
+  
+  .hover-text-honey {
+    font-size: 40px; /* Selbe Schriftgröße */
+    color: darkred;
+    z-index: 1; /* Leicht hinter dem großen Text */
+  }
+  
