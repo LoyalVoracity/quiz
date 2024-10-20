@@ -123,9 +123,9 @@ function OpalPictures() {
 
         {/* Display the selected reminder text inside this div */}
         <div className='container-click'>
-          <p>{displayTime}</p>
-          <p>{currentText}</p> {/* Tipp-Effekt Text */}
-          <p>{referenceText}</p> {/* Tipp-Effekt Referenz mit Buch-Emoji */}
+          <p id='dTime'>{displayTime}</p>
+          <p id='cText'>{currentText}</p> {/* Tipp-Effekt Text */}
+          <p id='rText'>{referenceText}</p> {/* Tipp-Effekt Referenz mit Buch-Emoji */}
         </div>
       </div>
     </div>
